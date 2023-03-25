@@ -3,16 +3,19 @@
 @{
     ViewData["Title"] = "Index";
 }
-
+<body class="bg-gradient bg-dark">
+<div class="text-center text-white-50">
 @using (Html.BeginForm("Index", "OutputName", FormMethod.Post))
 {
-    <div>Enter Name:</div>
-    <div>@Html.TextBox("Name")</div>
-    <div><button type="submit">Submit</button></div>
+    <div class="mt-3 h5">Enter Name:</div>
+        <div class="m-2">@Html.TextBox("Name")</div>
+            <div><button class="border-secondary text-light rounded bg-success bg-opacity-50" type="submit">Submit</button></div>
 }
 @{
     if (@Model.Name != null)
     {
-        <div>Hello, @Model.Name !</div>
+            <div class="mt-5 h3">Hello, @Model.Name!</div>
     }
 }
+</div>
+</body>

@@ -1,0 +1,18 @@
+﻿@model UserViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@using (Html.BeginForm("Index", "OutputName", FormMethod.Post))
+{
+    <div>Enter Name:</div>
+    <div>@Html.TextBox("Name")</div>
+    <div><button type="submit">Submit</button></div>
+}
+@{
+    if (@Model.Name != null)
+    {
+        <div>Hello, @Model.Name !</div>
+    }
+}
